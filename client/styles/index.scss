@@ -1,6 +1,107 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dr+Sugiyama&family=Laila&display=swap');body {
+  background-color: black;
+  margin: 0;
+}
 
-html, 
-body {
-  font-family: 'Montserrat', sans-serif;
+.app-windows {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+.app-windows iframe {
+  height: 100%;
+  width: 100%;
+  border: none;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+}
+
+.header h1 {
+  color:rgb(181, 159, 185);
+  margin: 10px 0px 0px 40px;
+  font-family: 'Dr Sugiyama', cursive;
+  font-size: 100px;
+}
+
+.subheading {
+  color:white;
+  margin: 0px 10px 20px 40px;
+  font-family: 'Laila', sans-serif;
+  font-size: 25px;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 30px;
+  color: white;
+  font-family: 'Laila', sans-serif;
+  font-size: 20px;
+}
+
+.footer p {
+  display: inline;
+  margin-right: 30px;
+}
+
+/* The device with borders */
+.smartphone {
+  position: relative;
+  width: 360px;
+  height: 640px;
+  margin: 10px;
+  border: 16px rgb(181, 159, 185) solid;
+  border-top-width: 60px;
+  border-bottom-width: 60px;
+  border-radius: 36px;
+}
+
+/* The horizontal line on the top of the device */
+.smartphone:before {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 5px;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #333;
+  border-radius: 10px;
+}
+
+/* The circle on the bottom of the device */
+.smartphone:after {
+  content: '';
+  display: block;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  left: 50%;
+  bottom: -65px;
+  transform: translate(-50%, -50%);
+  background: #333;
+  border-radius: 50%;
+}
+
+/* The screen (or content) of the device */
+.smartphone .content {
+  width: 360px;
+  height: 640px;
+  background: white;
+}
+
+@media only screen and (max-width: 600px) {
+  .app-windows {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+  }
 }
