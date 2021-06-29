@@ -3,13 +3,13 @@
   margin: 0;
 }
 
-.app-windows {
+.app-section {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
 }
 
-.app-windows iframe {
+.app-section iframe {
   height: 100%;
   width: 100%;
   border: none;
